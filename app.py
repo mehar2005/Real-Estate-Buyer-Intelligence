@@ -61,8 +61,6 @@ with st.sidebar:
             "Deployment Readiness",
             "Data Monitoring & Drift",
             "Clustering Algorithm Comparison",
-            "Technical Documentation",
-            "Final Submission Readiness",
             "Segment Campaign Scenario Planner",
             "Interactive Buyer Cohort Explorer",
             "Reproducibility & Release Pack",
