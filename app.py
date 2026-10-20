@@ -179,5 +179,4 @@ elif section == "Reproducibility & Release Pack":
 
 with st.sidebar:
     st.divider()
-    st.caption("Implemented: Sections 1–20")
     st.caption(f"Clients: {len(clients_clean):,} · Properties: {len(properties_clean):,}")
