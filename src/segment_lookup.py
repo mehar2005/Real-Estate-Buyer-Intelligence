@@ -25,7 +25,7 @@ def make_segment_lookup(clustered):
     return pd.DataFrame(rows)
 
 def render_segment_lookup(result):
-    st.header("Section 12 — Buyer Segment Lookup")
+    st.header("Buyer Segment Lookup")
     st.write("Explore a segment by cluster identifier and view its profile. This section supports analyst lookup and is not a trained predictive classifier for new clients.")
 
     clustered = result["clustered"].copy()

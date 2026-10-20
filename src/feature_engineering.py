@@ -132,7 +132,7 @@ def build_model_matrix(features):
     return np.asarray(matrix, dtype=float), preprocessor, metadata
 
 def render_feature_engineering(features, notes):
-    st.header("Section 4 — Feature Engineering")
+    st.header("Feature Engineering")
     st.write("The modeling table is built at the client level. Property records are aggregated by client reference so that customers with multiple property records are represented by summary features.")
     if notes:
         for note in notes:

@@ -46,7 +46,7 @@ def _build_summary(result, source_note):
     return "\n".join(lines)
 
 def render_report_exports(result, source_note):
-    st.header("Section 8 — Reports & Exports")
+    st.header("Reports & Exports")
     st.write("Export the analysis outputs for the internship submission and for further review outside the Streamlit application.")
 
     clustered = result["clustered"].copy()

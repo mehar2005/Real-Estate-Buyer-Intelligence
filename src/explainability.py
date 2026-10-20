@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 def render_cluster_explainability(result, matrix, feature_metadata):
-    st.header("Section 10 — Cluster Explainability")
+    st.header("Cluster Explainability")
     st.write("Because clustering is unsupervised, there is no ground-truth target to explain. This section uses cluster membership as a temporary label to identify which input features help distinguish the fitted groups. These are descriptive diagnostics, not causal explanations.")
 
     clustered = result["clustered"]

@@ -17,7 +17,7 @@ CHECKLIST = [
 ]
 
 def render_submission_readiness():
-    st.header("Section 17 — Final Submission Readiness")
+    st.header("Final Submission Readiness")
     st.write("Use this checklist before handing the project to Unified Mentor. Tick items only after you have personally verified them in your local environment.")
     completed = []
     for category, task in CHECKLIST:

@@ -15,7 +15,7 @@ def _safe_metric(func, matrix, labels):
         return None
 
 def render_model_validation(result, matrix):
-    st.header("Section 9 — Model Validation & Quality Diagnostics")
+    st.header("Model Validation & Quality Diagnostics")
     st.write("Evaluate the chosen clustering solution using complementary internal metrics and stability checks. These metrics describe geometric cluster quality; they do not establish business usefulness on their own.")
 
     labels = np.asarray(result["labels"])

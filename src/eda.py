@@ -14,7 +14,7 @@ def _safe_count_plot(df, column, title, top_n=15):
     st.plotly_chart(fig, use_container_width=True)
 
 def render_eda(clients, properties, client_features):
-    st.header("Section 3 — Exploratory Data Analysis")
+    st.header("Exploratory Data Analysis")
     st.write("Explore the distributions, missingness, and relationships in the supplied client and property datasets before fitting a clustering model.")
 
     t1, t2, t3 = st.tabs(["Client profiles", "Property activity", "Data quality"])

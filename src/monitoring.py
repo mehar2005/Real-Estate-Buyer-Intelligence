@@ -25,7 +25,7 @@ def _categorical_drift(reference, current, col):
             "Total variation distance": round(float(tvd), 4)}
 
 def render_data_monitoring(reference_clients, reference_properties):
-    st.header("Section 14 — Data Monitoring & Drift Checks")
+    st.header("Data Monitoring & Drift Checks")
     st.write("Compare the bundled/reference datasets with a newly supplied batch to spot changes in numeric distributions and categorical proportions. Drift flags are screening signals, not proof that a model has become invalid.")
 
     uploaded_clients = st.file_uploader("Upload a new clients batch (CSV)", type=["csv"], key="monitor_clients")

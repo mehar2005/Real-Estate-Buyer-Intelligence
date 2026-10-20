@@ -66,7 +66,7 @@ Use the same source data, dependency versions, preprocessing, and random seed wh
     return text
 
 def render_technical_documentation(result, source_note, clients, properties, feature_metadata):
-    st.header("Section 16 — Technical Documentation")
+    st.header("Technical Documentation")
     st.write("Generate a methodology document for the project report and inspect the current modeling configuration.")
     text = build_methodology_document(result, source_note, clients.shape, properties.shape, feature_metadata)
     st.markdown(text)

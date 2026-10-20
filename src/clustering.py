@@ -94,7 +94,7 @@ def _profile_clusters(clustered):
     return summary.reset_index()
 
 def render_clustering(result, features, matrix, feature_metadata):
-    st.header("Section 5 — Buyer Clustering")
+    st.header("Buyer Clustering")
     st.write("This section compares K-Means clustering across candidate cluster counts, selects a candidate using silhouette score, and profiles the resulting groups.")
     if "error" in result:
         st.error(result["error"])

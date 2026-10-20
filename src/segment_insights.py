@@ -52,7 +52,7 @@ def _recommendations(group, cluster):
     return recommendations
 
 def render_segment_interpretation(result):
-    st.header("Section 6 — Segment Interpretation & Recommendations")
+    st.header("Segment Interpretation & Recommendations")
     st.write("Interpret clusters using observed client and property features. The descriptive labels are generated from available fields; they are not ground-truth buyer categories.")
 
     clustered = result["clustered"].copy()

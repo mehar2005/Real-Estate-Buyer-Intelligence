@@ -43,7 +43,7 @@ def build_recommendation_table(clustered):
     return pd.DataFrame(rows)
 
 def render_business_recommendations(result):
-    st.header("Section 11 — Business Recommendations & Action Plan")
+    st.header("Business Recommendations & Action Plan")
     st.write("Recommendations are framed as testable hypotheses based on the observed cluster profiles, not guaranteed outcomes.")
 
     data = result["clustered"].copy()

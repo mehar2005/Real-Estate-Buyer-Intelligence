@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 def render_analytics_dashboard(result):
-    st.header("Section 7 — Interactive Analytics Dashboard")
+    st.header("Interactive Analytics Dashboard")
     st.caption("Filter the client segments to explore differences in buyer behavior and linked property activity.")
 
     data = result["clustered"].copy()

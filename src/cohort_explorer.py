@@ -10,7 +10,7 @@ def _options(df, col):
 
 
 def render_cohort_explorer(result):
-    st.header("Section 19 — Interactive Buyer Cohort Explorer")
+    st.header("Interactive Buyer Cohort Explorer")
     st.write("Create a reusable cohort across cluster assignment and available buyer attributes, then inspect the filtered profile and export the matching records.")
     df = result["clustered"].copy()
     filters = [c for c in ["cluster", "country", "region", "client_type", "acquisition_purpose", "loan_applied", "referral_channel"] if c in df.columns]

@@ -47,7 +47,7 @@ def build_release_manifest(clients, properties, result, source_note, project_roo
 
 
 def render_release_pack(clients, properties, result, source_note):
-    st.header("Section 20 — Reproducibility & Release Pack")
+    st.header("Reproducibility & Release Pack")
     st.write("Create a compact release manifest describing the active datasets, clustering run, key source-file hashes, and known limitations.")
     manifest = build_release_manifest(clients, properties, result, source_note)
     model = manifest["model_summary"]

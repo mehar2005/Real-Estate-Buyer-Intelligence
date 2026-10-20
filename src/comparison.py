@@ -6,7 +6,7 @@ from sklearn.metrics import adjusted_rand_score, silhouette_score
 from sklearn.cluster import KMeans, AgglomerativeClustering
 
 def render_cluster_comparison(result, matrix):
-    st.header("Section 15 — Clustering Algorithm Comparison")
+    st.header("Clustering Algorithm Comparison")
     st.write("Compare K-Means and hierarchical clustering across the same preprocessed client feature matrix. Metrics are internal diagnostics, not proof of business value.")
 
     k = int(result["chosen_k"])

@@ -4,7 +4,7 @@ import streamlit as st
 
 
 def render_scenario_planner(result):
-    st.header("Section 18 — Segment Campaign Scenario Planner")
+    st.header("Segment Campaign Scenario Planner")
     st.write("Estimate the potential economics of outreach campaigns by buyer segment. All rates and costs are user-entered assumptions, not predictions from the clustering model.")
     clustered = result["clustered"].copy()
     counts = clustered.groupby("cluster").size().rename("available_clients").reset_index()

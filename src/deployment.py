@@ -8,7 +8,7 @@ import sklearn
 import numpy as np
 
 def render_deployment_readiness(result, preprocessor, feature_metadata, source_note):
-    st.header("Section 13 — Deployment Readiness & Model Packaging")
+    st.header("Deployment Readiness & Model Packaging")
     st.write("Prepare a reproducible model bundle and review practical deployment requirements. This page packages the preprocessing object and clustering estimator for later reuse; it does not publish the app to a public hosting service.")
 
     clustered = result["clustered"]
