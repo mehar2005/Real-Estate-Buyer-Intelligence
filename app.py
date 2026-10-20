@@ -18,7 +18,6 @@ from src.deployment import render_deployment_readiness
 from src.monitoring import render_data_monitoring
 from src.comparison import render_cluster_comparison
 from src.documentation import render_technical_documentation
-from src.submission import render_submission_readiness
 from src.scenario_planner import render_scenario_planner
 from src.cohort_explorer import render_cohort_explorer
 from src.release_pack import render_release_pack
