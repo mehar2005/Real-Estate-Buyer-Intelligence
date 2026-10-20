@@ -61,7 +61,6 @@ with st.sidebar:
             "Deployment Readiness",
             "Data Monitoring & Drift",
             "Clustering Algorithm Comparison",
-            "Segment Campaign Scenario Planner",
             "Interactive Buyer Cohort Explorer",
             "Reproducibility & Release Pack",
         ],
