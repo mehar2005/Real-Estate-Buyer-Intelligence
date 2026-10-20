@@ -97,9 +97,9 @@ result = None
 if model_matrix is not None:
     result = cached_clustering(model_matrix, client_features, feature_metadata)
 
-if section == "1. Project Overview":
+if section == "Project Overview":
     render_project_overview(clients, properties, combined, source_note)
-elif section == "2. Data Loading & Quality":
+elif section == "Data Loading & Quality":
     render_data_quality(
         clients, properties, clients_clean, properties_clean,
         clients_report, properties_report, source_note
@@ -111,81 +111,76 @@ elif section == "2. Data Loading & Quality":
     with c2:
         st.subheader("Cleaned properties preview")
         render_dataset_preview(properties_clean, "properties")
-elif section == "3. Exploratory Data Analysis":
+elif section == "Exploratory Data Analysis":
     render_eda(clients_clean, properties_clean, client_features)
-elif section == "4. Feature Engineering":
+elif section == "Feature Engineering":
     render_feature_engineering(client_features, feature_notes)
-elif section == "5. Buyer Clustering":
+elif section == "Buyer Clustering":
     if result is None:
         st.error("The available data does not contain enough usable features for clustering.")
     else:
         render_clustering(result, client_features, model_matrix, feature_metadata)
-elif section == "6. Segment Interpretation":
+elif section == "Segment Interpretation":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_segment_interpretation(result)
-elif section == "7. Analytics Dashboard":
+elif section == "Analytics Dashboard":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_analytics_dashboard(result)
-elif section == "8. Reports & Exports":
+elif section == "Reports & Exports":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_report_exports(result, source_note)
-elif section == "9. Model Validation":
+elif section == "Model Validation":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_model_validation(result, model_matrix)
-elif section == "10. Cluster Explainability":
+elif section == "1Cluster Explainability":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         result["preprocessor"] = preprocessor
         render_cluster_explainability(result, model_matrix, feature_metadata)
-elif section == "11. Business Recommendations":
+elif section == "1Business Recommendations":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_business_recommendations(result)
-elif section == "12. Buyer Segment Lookup":
+elif section == "1Buyer Segment Lookup":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_segment_lookup(result)
-elif section == "13. Deployment Readiness":
+elif section == "1Deployment Readiness":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_deployment_readiness(result, preprocessor, feature_metadata, source_note)
-elif section == "14. Data Monitoring & Drift":
+elif section == "1Data Monitoring & Drift":
     render_data_monitoring(clients_clean, properties_clean)
-elif section == "15. Clustering Algorithm Comparison":
+elif section == "1Clustering Algorithm Comparison":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_cluster_comparison(result, model_matrix)
-elif section == "16. Technical Documentation":
+elif section == "1Technical Documentation":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_technical_documentation(result, source_note, clients, properties, feature_metadata)
-elif section == "17. Final Submission Readiness":
+elif section == "1Final Submission Readiness":
     render_submission_readiness()
-elif section == "18. Segment Campaign Scenario Planner":
-    if result is None or "error" in result:
-        st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
-    else:
-        render_scenario_planner(result)
-elif section == "19. Interactive Buyer Cohort Explorer":
+elif section == "1Interactive Buyer Cohort Explorer":
     if result is None or "error" in result:
         st.error(result.get("error", "Clustering could not be run.") if result else "Clustering could not be run.")
     else:
         render_cohort_explorer(result)
-elif section == "20. Reproducibility & Release Pack":
+elif section == "2Reproducibility & Release Pack":
     render_release_pack(clients_clean, properties_clean, result, source_note)
 
 with st.sidebar:
